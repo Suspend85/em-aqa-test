@@ -3,6 +3,7 @@ import sys
 
 from config import settings
 
+
 def create_allure_environment_file():
     platform_items = [
         f'OS={platform.system()}, {platform.version()}',

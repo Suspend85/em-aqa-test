@@ -10,9 +10,9 @@ from tools.playwright.pages import initialize_playwright_page
 def configure_test_id_attribute(playwright: Playwright) -> None:
     """
     Глобально меняет атрибут для page.get_by_test_id()
-    с data-testid на data-test.
+    со стандартного data-testid на data-test.
     """
-    playwright.selectors.set_test_id_attribute("data-test")
+    playwright.selectors.set_test_id_attribute('data-test')
 
 
 @pytest.fixture(params=settings.browsers)
