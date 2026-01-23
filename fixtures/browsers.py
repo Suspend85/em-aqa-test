@@ -22,9 +22,3 @@ def page(request: SubRequest, playwright: Playwright) -> Page:
         test_name=request.node.name,
         browser_type=request.param
     )
-
-# @pytest.fixture
-# def chromium_page(playwright: Playwright) -> Page:
-#     browser = playwright.chromium.launch(headless=False)
-#     yield browser.new_page()
-#     browser.close()
