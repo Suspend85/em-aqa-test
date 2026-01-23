@@ -31,7 +31,6 @@ jobs:
         run: |
           pytest -m regression --alluredir=./allure-results --numprocesses 2 
 
-
       - name: Get Allure history
         uses: actions/checkout@v4
         if: always()
