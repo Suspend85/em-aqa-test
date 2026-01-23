@@ -1,8 +1,6 @@
 import allure
 from playwright.sync_api import Page, expect
 
-# from elements.button import Button
-# from elements.text import Text
 from pages.base_page import BasePage
 
 
@@ -28,11 +26,6 @@ class LoginPage(BasePage):
         self.password_input = page.get_by_test_id('password')
         self.login_button = page.get_by_test_id('login-button')
         self.error_element = page.get_by_test_id('error')
-
-        # self.username_input = Input(page, 'username', 'Username')
-        # self.password_input = Input(page, 'password', 'Password')
-        # self.login_button = Button(page, 'login-button', 'Login')
-        # self.error_element = Text(page, 'error', 'Wrong username or password')
 
     def fill_login_form(self, username: str, password: str):
         expect(self.username_input).to_be_visible()
