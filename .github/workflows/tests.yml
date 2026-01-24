@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "tests/**"
+      - "pages/**"
+      - "elements/**"
+      - "fixtures/**"
+      - "tools/**"
+      - "conftest.py"
+      - "pytest.ini"
+      - "requirements.txt"
+      - ".github/workflows/**"
   pull_request:
     branches:
       - master
