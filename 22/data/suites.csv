@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","5652","User login with performance_glitch_user credentials","tests","Sat Jan 24 10:36:09 UTC 2026","passed","Sat Jan 24 10:36:14 UTC 2026","TestAuthorization","test_authorization","",""
+"","903","User login with correct credentials","tests","Sat Jan 24 10:36:07 UTC 2026","passed","Sat Jan 24 10:36:08 UTC 2026","TestAuthorization","test_authorization","",""
+"","499","User login with empty credentials","tests","Sat Jan 24 10:36:08 UTC 2026","passed","Sat Jan 24 10:36:08 UTC 2026","TestAuthorization","test_authorization","",""
+"","876","User login with locked out user credentials","tests","Sat Jan 24 10:36:07 UTC 2026","passed","Sat Jan 24 10:36:08 UTC 2026","TestAuthorization","test_authorization","",""
+"","555","User login with wrong credentials","tests","Sat Jan 24 10:36:08 UTC 2026","passed","Sat Jan 24 10:36:08 UTC 2026","TestAuthorization","test_authorization","",""
