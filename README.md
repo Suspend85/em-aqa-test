@@ -12,7 +12,7 @@
 5. [x] Логин пользователем performance_glitch_user (проверка перехода и загрузки страницы при возможных задержках)
 
 ## Структура проекта
-- `.env` - настроки для запуска тестов (URL, Браузеры, Headless: True/False)  
+- `.env` - настройки для запуска тестов (URL, Браузеры, Headless: True/False)  
 - `tests/` — тесты
 - `pages/` — Page Object
 - `fixtures/` — фикстуры
@@ -86,19 +86,11 @@ macOS / Linux:
 # CI/CD (GitHub Actions + GitHub Pages)
 
 ### Проект содержит workflow в .github/workflows/, который автоматически запускает тесты при push и pull_request.
-**Важно: Требуется предварительная настройка репозитория.**     
- В файле `.env` выставить `HEADLESS=True`, чтобы корректно отрабатывал Workflow на Github Actions.      
-Пайплайн запускается при условии коммитов изменений в файлах проекта:   
-      - `.env`    
-      - `tests/**`      
-      - `pages/**`  
-      - `elements/**`   
-      - `fixtures/**`   
-      - `tools/**`  
-      - `conftest.py`   
-      - `pytest.ini`    
-      - `requirements.txt`  
-      - `.github/workflows/**`  
+> Примечание:  
+В CI используется headless-режим браузера.  
+Для локального запуска значение `HEADLESS` можно менять в `.env`.         
+
+Пайплайн запускается при изменениях в тестах, Page Object, конфигурации и workflow-файлах (полный список в `tests.yml`).
 
 **Типовой пайплайн:**   
 - Checkout репозитория    
@@ -112,3 +104,5 @@ macOS / Linux:
 **Где смотреть результаты:**    
 GitHub Actions → вкладка Actions → последний запуск workflow    
 Allure отчет (GitHub Pages): публикуется как статическая страница (https://suspend85.github.io/em-aqa-test)
+
+> Проект подготовлен как тестовое задание на позицию Automation QA Engineer.
