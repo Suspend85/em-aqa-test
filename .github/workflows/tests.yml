@@ -49,16 +49,6 @@ jobs:
           allure_report: allure-history
           allure_history: allure-history
 
-      - name: Debug folders
-        if: always()
-        run: |
-          echo "=== allure-report ==="
-          ls -la allure-report || true
-          echo "=== allure-history ==="
-          ls -la allure-history || true
-          echo "=== gh-pages ==="
-          ls -la gh-pages || true
-
       - name: Deploy report to Github Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
@@ -67,4 +57,3 @@ jobs:
           publish_branch: gh-pages
           publish_dir: allure-history
           force_orphan: true
-
