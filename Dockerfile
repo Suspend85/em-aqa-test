@@ -9,7 +9,6 @@ ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
 COPY requirements.txt /app/requirements.txt
 RUN pip install --upgrade pip && pip install -r /app/requirements.txt
 
-# Ставим браузеры под ТВОЮ версию playwright из requirements.txt
 RUN python -m playwright install --with-deps
 
 COPY . /app
